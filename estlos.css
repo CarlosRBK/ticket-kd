@@ -1,0 +1,156 @@
+* {
+    font-size: 12px;
+    /* Tamaño de fuente reducido */
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+}
+
+td,
+th,
+tr,
+table {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+td.item,
+th.item {
+    width: 25mm;
+    /* Ancho de las columnas ajustado */
+    max-width: 25mm;
+    /* Ancho máximo de las columnas ajustado */
+}
+
+td.valor,
+th.valor {
+    width: 20mm;
+    /* Reducir el ancho de las columnas para dar más espacio */
+    max-width: 20mm;
+    /* Ancho máximo de las columnas ajustado */
+}
+
+
+.ticket {
+    width: 58mm;
+    max-width: 58mm;
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    padding: 5px;
+    /* Añadir un pequeño espacio de margen alrededor del ticket */
+}
+
+.qr {
+    max-width: 20mm;
+    /* Tamaño del código QR ajustado */
+}
+
+.qrContainer {
+    text-align: center;
+    align-content: center;
+    max-width: 50mm;
+    /* Ancho máximo ajustado */
+}
+
+.logokd {
+    max-width: 30mm; /* Reducir el tamaño del logotipo a 30mm o el valor deseado */
+    width: 100%; /* Hacer que la imagen ocupe el ancho completo del contenedor */
+    text-align: center;
+}
+
+.aclaracion {
+    font-size: 10px; /* Reducir el tamaño de fuente */
+    text-align: center;
+    max-width: 50mm; /* Ajustar el ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+.tituloFirma {
+    align-items: center;
+    font-size: 10px;
+
+}
+
+.containerFirma>th {
+    max-width: 50mm;
+    /* Ancho máximo ajustado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media print {
+
+    .oculto-impresion,
+    .oculto-impresion * {
+        display: none !important;
+    }
+}
+
+.ticketContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.List {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.itemList{
+    list-style: none;
+    text-decoration: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    min-width: 50mm;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.itemList > p {
+    min-width: 20mm;
+}
+
+.ListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 50mm; 
+}
+
+.firma{
+    min-width: 30mm;
+}
+
+.ListTitulo{
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    min-width: 50mm;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemListSeguridad{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 8px;
+    list-style-type: none; /* Quita los puntos de lista */
+    padding: 0; /* Quita el relleno predeterminado de la lista */
+}
+.seguridadContenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
